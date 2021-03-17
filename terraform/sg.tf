@@ -18,6 +18,14 @@ resource "aws_security_group" "security_group" {
     cidr_blocks = ["0.0.0.0/0"] #tfsec:ignore:AWS008
   }
 
+  ingress {
+    description = "Open Teamspeak File Transfer Port"
+    from_port   = 30033
+    to_port     = 30033
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"] #tfsec:ignore:AWS008
+  }
+
 
 
   egress {

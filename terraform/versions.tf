@@ -3,7 +3,7 @@ terraform {
     key            = "terraform-aws/ts3_server/terraform.tfstate"
     dynamodb_table = "terraform-statelock"
   }
-  required_version = ">= 0.13.0"
+  required_version = ">= 0.14.0"
   required_providers {
     aws = {
       source  = "hashicorp/aws"
